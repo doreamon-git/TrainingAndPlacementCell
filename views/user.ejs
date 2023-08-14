@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/user.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/companyIndex.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script  src="/js/jquery.js"></script> 
+    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <%- include('partials/navbar') %>
+    <%- include('partials/flash') %>
+       
+    
+    <div class="container">
+            <div class="profile-header">
+                <!-- Student Information -->
+                <div class="profile-details">
+                    <h2>
+                        <%= currentUser.name %>
+                        <%= currentUser.role %>
+                    </h2>
+                    <p>
+                        <%= currentUser.email %>
+                    </p>
+                    <!-- Add more student information here -->
+                </div>
+            </div>
+            <hr>
+            <% if(currentUser.role != 'Admin'){ %>
+            <!-- Courses and Grades -->
+            <div class="details">
+                <h3>Details</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Roll Number</td>
+                            <td>
+                                <%= currentUser.rollNo %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Course</td>
+                            <td>
+                                <%= currentUser.course %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Branch</td>
+                            <td>
+                                <%= currentUser.branch %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Start Year</td>
+                            <td>
+                                <%= currentUser.startYear %>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>End Year</td>
+                            <td>
+                                <%= currentUser.endYear %>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Contact Number</td>
+                            <td>
+                                <%= currentUser.contactNumber %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Date of Birth</td>
+                            <td>
+                                <%= currentUser.dob %>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <% } %>
+        </div>
+
+
+        <script src="/js/nav.js"></script>
+
+        </body>
+        </html>

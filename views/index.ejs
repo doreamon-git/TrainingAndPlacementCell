@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/companyIndex.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script  src="/js/jquery.js"></script> 
+    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+  </head>
+
+  <body>
+    <%- include('partials/navbar') %> 
+    
+  
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <img src="https://www.denofgeek.com/wp-content/uploads/2022/05/Leged-of-Zelda-Link.jpg" alt="Slide 1">
+      </div>
+      <div class="carousel-slide">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw3mplEgaz--x-B4vRJhwqqRWhet0aEukOsA&usqp=CAU" alt="Slide 2">
+      </div>
+      <div class="carousel-slide">
+        <img src="data:image/jpeg;base64,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" alt="Slide 3">
+      </div>
+      <button class="carousel-arrow left-arrow" onclick="prevSlide()">&larr;</button>
+    <button class="carousel-arrow right-arrow" onclick="nextSlide()">&rarr;</button>
+    </div>
+
+
+    <div class="background-container">
+      <section class="about-section">
+        <h2>About Us</h2>
+        <p>
+          The Training and Placement Cell at Kamla Nehru Institute of Technology stands as a beacon of guidance and support for our students' professional aspirations. With an unwavering commitment to excellence, our cell serves as a pivotal link between academia and the corporate realm. We take immense pride in orchestrating a dynamic platform that nurtures industry-academia collaboration, empowering students with the skill set, knowledge, and exposure necessary to thrive in today's fiercely competitive job landscape.
+        </p>
+        <p>
+          Through meticulously crafted programs, enriching workshops, and thoughtfully organized placement drives, we aim to empower our students to unleash their full potential and attain their career goals. At KNIT's Training and Placement Cell, we are dedicated to shaping destinies, bridging the gap between education and industry requirements, and ensuring that our students emerge as confident, competent professionals ready to make a significant impact in their chosen fields.
+        </p>
+      </section>
+    </div>
+    
+    
+
+    <div class="cards-container">
+      <div class="card" id="director-card">
+        <div class="circle-image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT59BcovgMNK39Aechc-CqKC9OxoGRKgdf06g&usqp=CAU" alt="Director's Image">
+        </div>
+        <div class="card-content">
+          <h3>Message from Director</h3>
+          <p>
+            As the Director of Kamla Nehru Institute of Technology, I am delighted to share the remarkable journey of our Training and Placement Cell. Our dedicated team is committed to nurturing a bridge between education and industry, empowering our students to excel in their careers.
+            Through innovative programs, partnerships, and skill-building initiatives, we aim to equip our students with the knowledge and skills necessary to thrive in a dynamic professional landscape. We encourage our students to actively engage with the Training and Placement Cell, as it serves as a catalyst for their success.<br>
+            
+            <p class="mt-4"> 
+              <b> Professor S.K Sinha <br>
+            Director, <br>
+            KNIT, Sultanpur
+          </b>
+        </p>
+          </p>
+        </div>
+      </div>
+  
+      <div class="card" id="tpc-head-card">
+        <div class="circle-image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSYQXGQMgQZZ0l6gcnXOSfipU111ruADR5ng&usqp=CAU" alt="TPC Head's Image">
+        </div>
+        <div class="card-content">
+          <h3>Message from TPC Head</h3>
+          <p>
+            I am honored to extend my warmest greetings to all the students and stakeholders of Kamla Nehru Institute of Technology. As the Head of the Training and Placement Cell (TPC), I take immense pride in guiding our students towards a successful and fulfilling career journey.
+
+Our TPC is dedicated to fostering a learning environment that encourages professional growth and development. Through various industry collaborations, workshops, and placement drives, we strive to ensure that our students are well-prepared to meet the demands of the corporate world.
+<br>
+            <p class="mt-4">
+            <b> Professor Samir Singh <br>
+            TPC Head, <br>
+            KNIT, Sultanpur
+          </b>
+        </p>
+          </p>
+        </div>
+      </div>
+    </div>
+
+     <div class="background-container"> 
+    <div class="hiring-partners-section pt-4">
+      <h3>Our Hiring Partners</h3>
+      <div class="company-list pb-4">
+        <div class="company">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToWZeDdh6ELHcgbJsXhbkOyzEBW4TTko7kQA&usqp=CAU" alt="Company 1 Logo">
+          <p>Company 1</p>
+        </div>
+        <div class="company">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToWZeDdh6ELHcgbJsXhbkOyzEBW4TTko7kQA&usqp=CAU" alt="Company 2 Logo">
+          <p>Company 2</p>
+        </div>
+        <div class="company">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToWZeDdh6ELHcgbJsXhbkOyzEBW4TTko7kQA&usqp=CAU" alt="Company 2 Logo">
+          <p>Company 2</p>
+        </div>
+        <div class="company">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToWZeDdh6ELHcgbJsXhbkOyzEBW4TTko7kQA&usqp=CAU" alt="Company 2 Logo">
+          <p>Company 2</p>
+        </div>
+        <div class="company">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToWZeDdh6ELHcgbJsXhbkOyzEBW4TTko7kQA&usqp=CAU" alt="Company 2 Logo">              
+          <p>Company 2</p>
+        </div>
+        <div class="company">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToWZeDdh6ELHcgbJsXhbkOyzEBW4TTko7kQA&usqp=CAU" alt="Company 2 Logo">
+          <p>Company 2</p>
+        </div>
+        <div class="company">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToWZeDdh6ELHcgbJsXhbkOyzEBW4TTko7kQA&usqp=CAU" alt="Company 2 Logo">
+          <p>Company 2</p>
+        </div>
+        <div class="company">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToWZeDdh6ELHcgbJsXhbkOyzEBW4TTko7kQA&usqp=CAU" alt="Company 2 Logo">
+          <p>Company 2</p>
+        </div>
+        
+        <div class="company">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToWZeDdh6ELHcgbJsXhbkOyzEBW4TTko7kQA&usqp=CAU" alt="Company 10 Logo">
+          <p>Company 10</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="tpo-list">
+      <h2>List of Training and Placement Officers (TPOs)</h2>
+      <div class="tpo-card-container">
+
+        <% for(let Tpo of allTpo){ %>
+          <div class="tpo-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT59BcovgMNK39Aechc-CqKC9OxoGRKgdf06g&usqp=CAU" alt="TPO 1">
+            <h3><%= Tpo.name  %></h3>
+            <p>Email:  <%= Tpo.email %> </p>
+            <p>Phone: <%= Tpo.contactNumber %> </p>
+          </div>   
+        <% } %>
+      </div>
+    </div>
+
+
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact Information</h3>
+          <p>Email: tpo@example.com</p>
+          <p>Phone: +123 456 7890</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <p>Stay connected with us on social media:</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Location</h3>
+          <p>Sultanpur - Kadipur Road, Sultanpur, Uttar Pradesh 228118</p>
+        </div>
+      </div>
+    </footer>
+        
+
+
+    <script src="/js/nav.js"></script>
+    <script src="/js/index.js"></script>    
+
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/companyIndex.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script  src="/js/jquery.js"></script> 
+    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    
+    <%- include('../partials/navbar')  %>
+    <%- include('../partials/flash') %>
+
+
+   <% if(currentUser && currentUser.role != 'student'){ %>
+   <div class="row d-flex justify-content-center mt-5">
+  <div class="col-9 d-flex justify-content-end">
+    <a href="/company/add"> 
+      <button type="button" class="btn btn-success rounded-pill" >Add Drive</button>
+    </a>
+    
+  </div>
+  </div>
+  <% } %>
+
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-9 mt-5">
+     <div class="driveHeading"> <h1> Ongoing Drives </h1></div>
+    <% for(let company of activeCompaniesList){ %>
+        <div class="card mt-4 ">
+          <div>
+            <div class="card-header d-flex justify-content-between">
+            <span> 
+              <h5 class="d-inline"><%= company.name %></h5> 
+              <h5 class="d-inline"> - <%= company.role %> </h5>
+            </span>
+          
+            <% if(currentUser && currentUser.role != 'student'){ %>
+            <span>
+              <form class="d-inline-block" action="/company/<%=company._id%>?_method=DELETE" method="POST">
+                <button class="mt-1" style="border: none; background-color: rgba(0,0,0,0);" title="delete"><i class="material-icons">delete</i></button>
+              </form>
+            </span>
+            <% } %> 
+          </div>
+           
+          </div>
+            <div class="card-body">
+              
+
+              <div class="row justify-content-between"> 
+              <div class="col-9"> <p class="card-text d-inline-block"><%- company.description %></p> </div>
+              <div class="col-3 d-flex justify-content-end pt-5"> <a href="/company/<%= company._id %>" >view</a> </div>
+            </div>
+
+            </div>
+          </div>
+    <% } %>
+
+    <div class="driveHeading mt-5"> <h1 class="pt-4">Past Drives </h1> </div>
+    
+    <% for(let company of pastCompaniesList){ %>
+      <div class="card mt-4">
+        <div class="card-header">
+          <h5 class=" pb-1"> <%= company.name %> - <%= company.role %> </h5>
+        </div>
+          <div class="card-body">
+           
+            <div class="row justify-content-between"> 
+              <div class="col-9"> <p class="card-text d-inline-block"><%- company.description %></p> </div>
+              <div class="col-3 d-flex justify-content-end pt-5"> <a  href="/company/<%= company._id %>" >view</a> </div>
+            </div>
+
+          </div>
+        </div>
+  <% } %>
+
+    </div>
+
+  </div>
+
+
+
+  <script src="/js/nav.js"></script>
+  
+</body>
+</html>
+
+
+
+
+

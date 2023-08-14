@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/addCompany.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script  src="/js/jquery.js"></script> 
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    
+  
+  <%- include('../partials/navbar')  %>
+  <%- include('../partials/flash') %>
+
+   
+<section class="">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5  text-lg-start" >
+      <div class="container">
+        <div class="row gx-lg-5 ">
+  
+          
+            <div class="card card-custom">
+              <div class="d-flex justify-content-center mt-3"> <h2> Add Drive </h2></div>
+              <div class="card-body py-4 px-md-3">
+                <form action="/company/add" method="POST">
+                  <!-- 2 column grid layout with text inputs for the first and last names -->
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <label class="form-label" for="form3Example1">Company Name</label>
+                        <input type="text" id="form3Example1" class="form-control" name = "name" />
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <label class="form-label" for="form3Example2">Role</label>
+                        <input type="text" id="form3Example2" class="form-control" name = "role" />                       
+                      </div>
+                    </div>
+                  </div>
+  
+                  
+                <div class="row">
+                  
+                  <div class="entry col-6">
+                   <div class="mb-2">Company Description</div> 
+                    <script src="https://cdn.ckeditor.com/4.9.1/standard/ckeditor.js"></script>
+                  
+                  <div class="body">
+                   <textarea name="description"></textarea>
+                     <script>
+                         CKEDITOR.replace( 'description' );
+                     </script>
+                    
+                  </div>
+                  </div>
+
+                  <div class="form-outline mb-4 col-6">
+                    <label class="form-label" for="form3Example3">Pakage(in lpa)</label>
+                    <input type="number" id="form3Example3" class="form-control" name = "pakage"/>                   
+
+                    <label class="form-label mt-3" for="form3Example3">Eligible Year</label>
+                    <input type="number" id="form3Example3" class="form-control" placeholder="YYYY" name = "eligibleYear"/> 
+
+                    <div class="mt-3">
+                      Eligible Branches
+                      <div>
+                      <input class="form-check-input" type="checkbox" id="flexCheckDefault" name = "eligibleBranches[]" value = "CSE">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        CSE
+                      </label>
+                      </div>
+                      <div>
+                        <input class="form-check-input" type="checkbox" id="flexCheckDefault" name = "eligibleBranches[]" value = "IT">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          IT
+                        </label>
+                       </div>
+                       <div>
+                          <input class="form-check-input" type="checkbox" id="flexCheckDefault" name = "eligibleBranches[]" value = "EL">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            EL
+                          </label>
+                        </div>
+                        <div>
+                          <input class="form-check-input" type="checkbox" id="flexCheckDefault" name = "eligibleBranches[]" value = "EE">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            EE
+                          </label>
+                        </div>
+                        <div>
+                          <input class="form-check-input" type="checkbox" id="flexCheckDefault" name = "eligibleBranches[]" value = "ME">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            ME
+                          </label>
+                        </div>
+                        <div>
+                          <input class="form-check-input" type="checkbox" id="flexCheckDefault" name = "eligibleBranches[]" value = "CL">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            CL
+                          </label>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+
+                  <!-- Submit button -->
+                  <div class="d-flex justify-content-center mt-4">
+                  <button type="submit" class="button-custom rounded-pill">
+                    Add
+                  </button>
+                  </div>
+                  
+                  </div>
+                </form>
+              </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
+
+
+  <script src="/js/nav.js"></script>
+
+</body>
+</html>

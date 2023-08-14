@@ -1,0 +1,91 @@
+
+  .notification-icon::after {
+    display: none !important;
+}
+
+.notification-icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.notification-count {
+  position: absolute;
+  top: 4px;
+  right: -4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+}
+
+.dropdown-menu {
+  min-width: 200px;
+  margin: 0%;
+}
+
+.notification-item {
+  padding: 12px;
+  border-bottom: 5px solid #d2d1d1;
+}
+
+/* Override Bootstrap styles for dropdown width */
+.dropdown-menu.notification-dropdown {
+  min-width: 400px !important;
+}
+
+/* Custom CSS to override Bootstrap styles */
+.dropdown-menu.custom-dropdown-menu {
+  left: 50%;
+  right: auto;
+  transform: translateX(-80%);
+  height: 380px; /* Set the desired height for the dropdown menu */
+  overflow-y: auto; /* Enable vertical scroll if content exceeds the height */
+}
+
+.dropdown-menu.custom-profile-menu {
+  left: 50%;
+  right: auto;
+  transform: translateX(-80%);
+  overflow-y: auto; /* Enable vertical scroll if content exceeds the height */
+}
+
+
+.notification-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc !important;
+}
+
+.notification-content {
+  margin: none;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+}
+
+.notification-time {
+  font-size: 11px;
+  color: #9ca3a8;
+}
+
+.notification-icon .fa-bell {
+  color: hsla(200,6%,90%,.75);
+}
+
+.notification-icon:hover .fa-bell,
+.notification-icon.active .fa-bell {
+  color: #e3dfdf; /* Change the color to your desired color when the dropdown is open */
+}
+
+
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(to bottom, #15202B, #1C2938); /* Gradient background */
+  color: #ffffff;
+}
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/showPlacementRecord.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script  src="/js/jquery.js"></script> 
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+
+
+<%- include('../partials/navbar') %>
+    <%- include('../partials/flash') %>
+
+    <section class="vh-100 gradient-custom">
+      <div class="container py-5 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+          <div class="col-12 col-lg-9 col-xl-7">
+            <div
+              class="card shadow-2-strong card-registration"
+              style="border-radius: 15px"
+            >
+              <div class="card-body p-4 p-md-5">
+                <h3
+                  class="mb-4 pb-2 pb-md-0 mb-md-5 d-flex justify-content-center"
+                >
+                  Search Students
+                </h3>
+                <form action="/manage/placementRecord/filter" method="POST">
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <label class="form-label" for="firstName">Name</label>
+                        <input
+                          type="text"
+                          id="firstName"
+                          name="name"
+                          class="form-control form-control-lg"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <label class="form-label" for="lastName"
+                          >Roll No.</label
+                        >
+                        <input
+                          type="number"
+                          id="lastName"
+                          name="rollNo"
+                          class="form-control form-control-lg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4 d-flex align-items-center">
+                      <div class="form-outline datepicker w-100">
+                        <label for="birthdayDate" class="form-label"
+                          >Company Name</label
+                        >
+                        <input
+                          type="text"
+                          name="company"
+                          class="form-control form-control-lg"
+                          id="birthdayDate"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4 pb-2">
+                      <div class="form-outline">
+                        <label class="form-label" for="phoneNumber"
+                          >Highest Pakage</label
+                        >
+                        <input
+                          type="number"
+                          id="phoneNumber"
+                          name="highestPakage"
+                          class="form-control form-control-lg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2">
+                      <div class="form-outline">
+                        <label class="form-label" for="emailAddress"
+                          >Year</label
+                        >
+                        <input
+                          type="number"
+                          id="emailAddress"
+                          name="endYear"
+                          class="form-control form-control-lg"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4 pb-2">
+                      <div>
+                        <label class="form-label select-label">Branch</label>
+                      </div>
+                      <select name="branch" class="select form-control-sm">
+                        <option value=""></option>
+                        <option value="CSE">CSE</option>
+                        <option value="IT">IT</option>
+                        <option value="EL">EL</option>
+                        <option value="EE">EE</option>
+                        <option value="ME">ME</option>
+                        <option value="CL">CL</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 pt-2 d-flex justify-content-center">
+                    <input
+                      class="button-custom"
+                      type="submit"
+                      value="Apply"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="/js/nav.js"></script>
+  </body>
+</html>

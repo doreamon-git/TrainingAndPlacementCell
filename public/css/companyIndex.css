@@ -1,0 +1,66 @@
+
+
+/* Card Headers */
+.card-header {
+  background: linear-gradient(135deg, #f3f2f2, #dddddd);
+  color: #1e1d1d;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Card Body */
+.card-body {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+  color: #191818;
+  height: 160px; /* Set the desired height for the cards */
+  overflow: hidden;
+}
+
+/* Drive Heading */
+.driveHeading {
+  font-family: Merriweather, serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  color: #3c1364;
+  margin-bottom: 20px;
+}
+
+/* Add this CSS to your stylesheet */
+.card-body a[href*="/company/"] {
+  display: inline-block;
+  background-color: #3c1364; /* Dark purple background color for "View" link */
+  color: white; /* White text color for "View" link */
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 30px; /* Set a fixed height for the button */
+  line-height: 18px; /* Center the text vertically */
+}
+
+.card-body a[href*="/company/"]:hover {
+  background-color: #543f87; /* Slightly lighter purple on hover for "View" link */
+}
+
+
+
+
+
+/* Add this CSS to your stylesheet */
+.driveHeading {
+  font-family:Arial, sans-serif;
+  font-weight: 1000;
+  font-size: 37px;
+  line-height: 0.5;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #28034d; /* Dark purple color for the heading text */
+  position: relative;
+  border-bottom: 4px solid #28034d;
+
+}
+

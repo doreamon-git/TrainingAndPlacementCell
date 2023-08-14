@@ -1,0 +1,368 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 1200px;
+    height: 450px;
+    margin: 2em auto 0;
+    overflow: hidden;
+    border: 2px solid #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+  }
+  .carousel-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with the URL of your background image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7; /* Adjust the opacity as desired */
+    z-index: -1; /* Place the background behind the carousel slides */
+  }
+  
+  .carousel-slide {
+    display: none;
+  }
+  
+  .carousel-slide img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the arrow background color and opacity as desired */
+    border: 1px solid #333; /* Add a border to the arrows */
+    border-radius: 50%; /* Make the arrows circular */
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
+  /* Additional styling for navigation arrows, if desired */
+  
+
+
+
+
+  .about-section {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 20px;
+    text-align: justify;
+    background-color: rgb(243, 242, 242);
+    margin-bottom: 2em; /* Add margin at the bottom */
+  }
+  
+  .about-section h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    font-size: 26px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #171616;
+  }
+  
+  .about-section p {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  
+  .cards-container {
+    max-width: 1200px;
+    margin: 4em auto 0;
+    display: flex;
+    justify-content: space-between;
+  }
+    
+
+
+  
+  .card {
+    width: calc(50% - 10px); /* Adjust the space between the cards */
+    background: linear-gradient(45deg, #f9a7b0, #ffeee6); /* Gradient background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    transition: transform 0.2s ease; /* Add a smooth transition effect */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Add a slight lift effect on hover */
+  }
+  
+  #director-card .circle-image,
+  #tpc-head-card .circle-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px; /* Space between the image and content */
+  }
+  
+  .circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding-left: 20px;
+  }
+  
+  #director-card {
+    background: linear-gradient(45deg, #1a3143, #3c1364); /* Dark blue to deep purple gradient */
+  }
+  
+  #tpc-head-card {
+    background: linear-gradient(45deg, #1a3143, #3c1364); /* Dark blue to deep purple gradient */
+  }
+
+  .card h3 {
+    color: #ded7e6; /* Dark purple heading color */
+    border-bottom: 2px solid #ded7e6; /* Dark purple border bottom */
+    padding-bottom: 10px;
+    font-size: 20px; /* Increased font size for headings */
+  }
+  
+  .card p {
+    line-height: 1.6;
+    color: #999; /* Light gray text color */
+    font-size: 16px; /* Standard font size for paragraphs */
+  }
+  
+  h1 {
+    margin: 0;
+    color: #3c1364; /* Dark purple heading color */
+    font-size: 24px; /* Larger font size for h1 */
+    font-weight: bold;
+  }
+  
+  .message-card p {
+    line-height: 1.6;
+    color: #999; /* Light gray text color */
+    font-size: 16px; /* Standard font size for paragraphs */
+  }
+      
+  
+
+
+
+
+
+  .hiring-partners-section {
+    background-color: rgb(243, 242, 242);
+    max-width: 1200px;
+    margin: 3em auto;
+  }
+  
+  .hiring-partners-section h3 {
+    font-size: 28px;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  .company-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .company {
+    width: 130px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .company img {
+    width: 55px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .company p {
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  h2 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 18px;
+  }
+  
+
+
+
+
+
+  
+  .tpo-list {
+    max-width: 1200px;
+    margin: 4em auto;
+    text-align: center;
+  }
+  
+  .tpo-list h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .tpo-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .tpo-card {
+    width: calc(25% - 20px); /* Adjust space between cards */
+    height: 350px; /* Adjust the height */
+    margin-bottom: 20px;
+    padding: 20px;
+    background: linear-gradient(45deg, #2d1f54, #19192f);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .tpo-card img {
+    width: 120px; /* Adjust the image width */
+    height: 120px; /* Adjust the image height */
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .tpo-card h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #dbd9d9;
+  }
+  
+  .tpo-card p {
+    margin: 0;
+    font-size: 16px;
+    color: #cccaca;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+      
+
+
+
+
+
+
+
+
+
+  .footer {
+    background-color: #15202B;
+    color: #ffffff;
+    padding: 40px 0;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 0 20px;
+    padding: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  .footer-section p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #f0f0f0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+  }
+  
+  .social-icons a {
+    color: #ffffff;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  .social-icons a:last-child {
+    margin-right: 0;
+  }
+  
+.background-container{
+  background-color: rgb(243, 242, 242);
+}
+  
+
+
+
+
+
+
+
+  

@@ -1,0 +1,6 @@
+/* Custom styles for the table header */
+.table thead {
+    background: linear-gradient(to bottom, #252535, #232343); /* Gradient background */
+    color: #dddddd; /* Text color */
+  }
+  

@@ -1,0 +1,36 @@
+/* Custom styles for the card */
+.card-registration {
+    background: linear-gradient(135deg, #f5f5f5, #dddddd);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .button-custom {
+    background-color: #22223c;
+    color: #dddddd;
+    width: 5em;
+    height: 2.4em;
+    border: none;
+    padding: 2px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .button-custom:hover {
+    background-color: #0d0d1a;
+    color: #ffffff;
+  }
+  
+  /* Adjust input focus styles */
+  .card-registration input[type="text"]:focus,
+  .card-registration input[type="number"]:focus,
+  .card-registration select:focus {
+    border-color: #303f9f;
+  }
+  
+  /* Adjust input placeholder color */
+  .card-registration ::placeholder {
+    color: #8894c3;
+  }
+  

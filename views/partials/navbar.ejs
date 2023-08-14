@@ -1,0 +1,93 @@
+
+<nav id="Navbar" class="navbar navbar-expand-lg navbar-dark " >
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle='collapse' data-bs-target="#navbarSupportedContent" aria-controls="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+          <div class=" navbar-nav">
+  
+         <div class=" text-light  pt-2 pb-2 " style="padding-right: 7.6em; margin-left: 3em;" ><a href="/" style="text-decoration:none; color:honeydew;"><b>Training and Placement Cell</b></a> </div>
+              
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 navBar" >
+            <% if(currentUser){ %>
+            <li class="nav-item mx-5 navLink">
+              <a class="nav-link" href="/company">Drive</a>
+            </li>
+              <% } %>
+
+              <% if(currentUser && currentUser.role != 'student'){ %>
+              <li class="nav-item dropdown mx-5 navLink">
+                <a class="nav-link dropdown-toggle" href="/manage" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Manage
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <% if(currentUser && currentUser.role == 'Admin'){ %>
+                  <li><a class="dropdown-item" href="/manage/TPO">Manage TPO</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <% } %>
+                  <li><a class="dropdown-item" href="/manage/placementRecord">Placement Record</a></li>
+                
+                </ul>
+              </li>
+
+
+
+              <% } %>
+          </ul>
+    
+          </div>
+      </div>
+  
+      <div class="d-flex justify-content-between mx-5">
+
+        
+
+        <% if(currentUser){ %>
+
+          <% if(currentUser.role != 'Admin'){ %>
+          <div class="dropdown mx-5 ">
+             <div class="notification-icon dropdown-toggle" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-bell mt-3" id="bellIcon"></i>
+              <span class="notification-count"> <%= notificationCount %> </span>
+              </div>
+
+            <ul class="dropdown-menu notification-dropdown custom-dropdown-menu " aria-labelledby="notificationDropdown" id="notificationArea">
+              
+            </ul>
+          </div>
+          <% } %>
+
+
+          <div class="dropdown mx-5 mt-2">
+            <a class="dropdown-toggle" style="font-size: 1.5em;color: hsla(200,6%,90%,.75);"  id="logoutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            </a>
+            <ul class="dropdown-menu custom-profile-menu" aria-labelledby="logoutDropdown">
+              <li><a class="dropdown-item" href="/profile/<%=currentUser._id %>">
+                <%= currentUser.name %>
+              </a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/auth/logout">Logout</a></li>
+            </ul>
+          </div>
+         
+
+          <% } else { %>
+            <form action="/auth">
+              <button class="btn btn-danger"> Login/SignUp </button>
+            </form>
+            <% } %>
+    
+      </div>
+      </div>
+
+
+
+     
+
+
+  </nav>
+  
+  
+  

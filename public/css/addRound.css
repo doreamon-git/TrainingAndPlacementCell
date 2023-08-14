@@ -1,0 +1,13 @@
+#studentList{
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+#attributesDiv{
+    display: inline-block;    
+}
+#valuesDiv{
+    display: inline-block;    
+}
